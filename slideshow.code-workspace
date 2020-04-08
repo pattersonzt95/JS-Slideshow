@@ -1,0 +1,32 @@
+var slideshow = {
+    photoList:[ "img0","img1","img2","img3"],
+    }
+
+    currentPhotoIndex : 0,
+
+    nextPhoto : function(){
+        if(this.currentPhotoIndex < this.photoList.length-1){
+            this.currentPhotoIndex++;
+        }else if(this.currentPhotoIndex >= this.photoList.length-1){
+            return "end of slides";
+        }
+
+        return this.photoList[this.currentPhoto];
+
+
+    },
+
+    prevPhoto: function(){
+        if(this.currentPhotoIndex > 0){
+            this.currentPhotoIndex--;
+        }else if(this.currentPhotoIndex === 0){
+            return "Start Slideshow";
+        },
+
+
+        getCurrentPhoto: function(){
+            return this.photoList[this,currentPhotIndex];
+        }
+    };
+
+    console.log(slideshow.getCurrentPhoto());
